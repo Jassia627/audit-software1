@@ -1,0 +1,11 @@
+version: '3'
+
+services:
+  nikto:
+    image: frapsoft/nikto
+    command: /bin/sh -c "while true; do sleep 30; done;"  # Mantener el contenedor en ejecución
+    volumes:
+      - nikto_results:/results
+
+volumes:
+  nikto_results:
